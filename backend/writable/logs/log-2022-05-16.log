@@ -1,0 +1,32 @@
+CRITICAL - 2022-05-16 22:57:24 --> Attempt to assign property "curso" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ContenidosController->guardar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ContenidosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-16 22:58:04 --> Attempt to assign property "curso" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ContenidosController->guardar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ContenidosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-16 22:58:48 --> Attempt to assign property "curso" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ContenidosController->guardar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ContenidosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-16 22:59:08 --> Attempt to assign property "curso" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ContenidosController->guardar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ContenidosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-16 23:01:05 --> App\Models\DocumentosModel::guardar(): Argument #1 ($data) must be of type object, array given, called in C:\proyectos\academia\backend\app\Controllers\API\ContenidosController.php on line 97
+#0 C:\proyectos\academia\backend\app\Controllers\API\ContenidosController.php(97): App\Models\DocumentosModel->guardar(Array)
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ContenidosController->guardar()
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ContenidosController))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-05-16 23:07:24 --> Cannot add or update a child row: a foreign key constraint fails (`school`.`contenidos`, CONSTRAINT `fk_contenidos_Documentos1` FOREIGN KEY (`documento`) REFERENCES `documentos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)

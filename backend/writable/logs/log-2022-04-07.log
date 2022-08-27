@@ -1,0 +1,55 @@
+ERROR - 2022-04-07 04:47:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`status`
+FROM `curso`
+WHERE `curso`.`deleted_at` IS NULL
+ LIMIT 1' at line 1
+ERROR - 2022-04-07 05:29:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '`deleted_at` is null
+AND `curso`.`deleted_at` IS NULL
+ORDER BY `curso`.`id` ASC' at line 7
+ERROR - 2022-04-07 05:30:36 --> Unknown column 'as.deleted_at' in 'where clause'
+CRITICAL - 2022-04-07 06:29:02 --> App\Models\PersonaModel::getStudents(): Argument #1 ($infoTable) must be of type array, stdClass given, called in C:\proyectos\academia\backend\app\Controllers\API\EstudiantesController.php on line 36
+#0 C:\proyectos\academia\backend\app\Controllers\API\EstudiantesController.php(36): App\Models\PersonaModel->getStudents(Object(stdClass))
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\EstudiantesController->mostrar()
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\EstudiantesController))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-04-07 06:54:20 --> Unknown column 'persona.nombre' in 'field list'
+ERROR - 2022-04-07 06:55:48 --> Cannot add or update a child row: a foreign key constraint fails (`school`.`persona`, CONSTRAINT `fk_persona_programa1` FOREIGN KEY (`programa`) REFERENCES `programa` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+ERROR - 2022-04-07 06:57:41 --> Cannot add or update a child row: a foreign key constraint fails (`school`.`persona`, CONSTRAINT `fk_persona_programa1` FOREIGN KEY (`programa`) REFERENCES `programa` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+CRITICAL - 2022-04-07 07:38:45 --> App\Models\UsuarioModel::getUsuarios(): Argument #1 ($infoTable) must be of type array, stdClass given, called in C:\proyectos\academia\backend\app\Controllers\API\UsuarioController.php on line 34
+#0 C:\proyectos\academia\backend\app\Controllers\API\UsuarioController.php(34): App\Models\UsuarioModel->getUsuarios(Object(stdClass))
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\UsuarioController->mostrar()
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\UsuarioController))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-04-07 07:49:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as nombre, `p`.`tipo_documento` as `tipo_documento`, `usuario`.`correo`, `usua' at line 1
+ERROR - 2022-04-07 07:50:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as nombre, `p`.`tipo_documento`, `usuario`.`correo`, `usuario`.`celular`, `usu' at line 1
+ERROR - 2022-04-07 07:51:16 --> Unknown column 'p.numero_identificacion' in 'field list'
+ERROR - 2022-04-07 07:52:50 --> Unknown column 'usuario.celular' in 'field list'
+CRITICAL - 2022-04-07 08:40:44 --> Cannot redeclare App\Controllers\API\UsuarioController::guardar()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-04-07 08:41:10 --> Cannot redeclare App\Controllers\API\UsuarioController::guardar()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-04-07 08:41:24 --> Cannot redeclare App\Controllers\API\UsuarioController::guardar()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+ERROR - 2022-04-07 08:44:33 --> Duplicate entry '4' for key 'PRIMARY'
+ERROR - 2022-04-07 08:46:04 --> Duplicate entry '4' for key 'PRIMARY'
+ERROR - 2022-04-07 10:12:30 --> Unknown column 'updated_at' in 'field list'
+ERROR - 2022-04-07 10:13:52 --> Unknown column 'updated_at' in 'field list'
+ERROR - 2022-04-07 10:14:30 --> Unknown column 'updated_at' in 'field list'
+ERROR - 2022-04-07 10:15:55 --> Unknown column 'updated_at' in 'field list'
+ERROR - 2022-04-07 10:16:05 --> Unknown column 'updated_at' in 'field list'
+ERROR - 2022-04-07 10:17:37 --> Unknown column 'updated_at' in 'field list'
+ERROR - 2022-04-07 10:27:01 --> Duplicate entry '1' for key 'PRIMARY'
+CRITICAL - 2022-04-07 10:29:47 --> Attempt to assign property "status" on null
+#0 C:\proyectos\academia\backend\app\Controllers\API\InscripcionController.php(165): App\Models\InscripcionModel->eliminar(Object(stdClass))
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\InscripcionController->eliminar()
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\InscripcionController))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-04-07 13:11:58 --> Unknown column 'usuario.id' in 'field list'

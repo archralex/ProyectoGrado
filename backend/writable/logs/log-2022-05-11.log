@@ -1,0 +1,16 @@
+ERROR - 2022-05-11 05:57:06 --> Duplicate entry '6' for key 'PRIMARY'
+ERROR - 2022-05-11 06:15:03 --> Duplicate entry 'marco' for key 'username_UNIQUE'
+CRITICAL - 2022-05-11 07:09:18 --> Attempt to assign property "token" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ContenidosController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ContenidosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-11 07:10:02 --> Attempt to assign property "token" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ContenidosController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ContenidosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2022-05-11 07:14:31 --> Unknown column 'inscripcion.curso' in 'on clause'
+ERROR - 2022-05-11 08:27:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '://proyectos, contenidos.url) AS url, `contenidos`.`status`, `curso`.`nombre` as' at line 1

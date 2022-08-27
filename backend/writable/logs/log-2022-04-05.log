@@ -1,0 +1,68 @@
+ERROR - 2022-04-05 05:55:15 --> Unknown column 'curso.programa' in 'on clause'
+ERROR - 2022-04-05 06:01:23 --> Unknown column 'curso.programa' in 'on clause'
+ERROR - 2022-04-05 06:10:00 --> Unknown column 'curso.programa' in 'on clause'
+ERROR - 2022-04-05 06:10:46 --> Unknown column 'curso.programa' in 'on clause'
+ERROR - 2022-04-05 06:21:43 --> Unknown column 'curso.programa' in 'on clause'
+CRITICAL - 2022-04-05 21:26:38 --> Attempt to assign property "token" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\CursosController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CursosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-05 21:27:13 --> Attempt to assign property "token" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\CursosController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CursosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-05 21:28:14 --> Attempt to assign property "token" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ProgramasController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ProgramasController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-05 21:28:36 --> Attempt to assign property "token" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ProgramasController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ProgramasController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-05 21:29:23 --> Attempt to assign property "token" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ProgramasController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ProgramasController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-05 21:29:49 --> Attempt to assign property "token" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ProgramasController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ProgramasController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-05 21:30:47 --> Attempt to assign property "token" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ProgramasController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ProgramasController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-05 21:31:15 --> Attempt to assign property "token" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\CursosController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CursosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-05 21:32:24 --> Attempt to assign property "token" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\CursosController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CursosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-05 21:33:16 --> Attempt to assign property "token" on null
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\CursosController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CursosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2022-04-05 21:35:05 --> Unknown column 'programa.id' in 'field list'
+ERROR - 2022-04-05 22:56:43 --> Cannot add or update a child row: a foreign key constraint fails (`school`.`curso_programa`, CONSTRAINT `fk_curso_categoria_curso1` FOREIGN KEY (`curso`) REFERENCES `curso` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+ERROR - 2022-04-05 23:20:18 --> Cannot add or update a child row: a foreign key constraint fails (`school`.`curso_programa`, CONSTRAINT `fk_curso_programa_programa1` FOREIGN KEY (`programa`) REFERENCES `programa` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)

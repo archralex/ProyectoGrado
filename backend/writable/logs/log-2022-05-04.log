@@ -1,0 +1,3 @@
+ERROR - 2022-05-04 05:45:37 --> Cannot add or update a child row: a foreign key constraint fails (`school`.`curso_programa`, CONSTRAINT `fk_curso_categoria_curso1` FOREIGN KEY (`curso`) REFERENCES `curso` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+ERROR - 2022-05-04 05:49:42 --> Cannot add or update a child row: a foreign key constraint fails (`school`.`curso_programa`, CONSTRAINT `fk_curso_categoria_curso1` FOREIGN KEY (`curso`) REFERENCES `curso` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+ERROR - 2022-05-04 06:15:28 --> Cannot add or update a child row: a foreign key constraint fails (`school`.`curso_programa`, CONSTRAINT `fk_curso_categoria_curso1` FOREIGN KEY (`curso`) REFERENCES `curso` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)

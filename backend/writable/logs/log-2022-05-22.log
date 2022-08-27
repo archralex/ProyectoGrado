@@ -1,0 +1,26 @@
+CRITICAL - 2022-05-22 18:09:38 --> Attempt to assign property "token" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ContenidosController->eliminar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ContenidosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-22 18:10:34 --> Attempt to assign property "token" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ContenidosController->eliminar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ContenidosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-22 18:36:44 --> Call to undefined function deleteDirectory()
+#0 C:\proyectos\academia\backend\app\Controllers\API\ContenidosController.php(238): eliminarArchivo(Array)
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ContenidosController->eliminar()
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ContenidosController))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-22 19:12:17 --> App\Models\DocumentosModel::findDocumento(): Argument #1 ($data) must be of type object, string given, called in C:\proyectos\academia\backend\app\Controllers\API\ContenidosController.php on line 173
+#0 C:\proyectos\academia\backend\app\Controllers\API\ContenidosController.php(173): App\Models\DocumentosModel->findDocumento('6')
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ContenidosController->editar()
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ContenidosController))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

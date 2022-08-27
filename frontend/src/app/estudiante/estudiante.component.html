@@ -1,0 +1,44 @@
+<mat-drawer-container class="container-fluid vh-100 p-0" autosize>
+  <mat-drawer #drawer class="pe-1 ps-1" mode="side" opened>
+    <!-- Menu -->
+    <nav class="min-vh-100 bg-light p-3">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/estudiante/dashboard">
+              <fa-icon [icon]="faHouseChimneyUser"></fa-icon>
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/estudiante/perfil">
+              <fa-icon [icon]="faCogs"></fa-icon>
+              Perfil
+            </a>
+          </li>
+          <li class="nav-item">
+            <!-- logout -->
+            <a class="nav-link link" (click)="logout()">
+              <fa-icon [icon]="faSignOutAlt"></fa-icon>
+              Cerrar Sesión
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </mat-drawer>
+
+  <div class="bg-primary text-white">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 p-0">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+</mat-drawer-container>

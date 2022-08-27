@@ -1,0 +1,18 @@
+CRITICAL - 2022-05-13 09:06:39 --> Attempt to assign property "token" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ContenidosController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ContenidosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-13 09:15:13 --> Attempt to assign property "token" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ContenidosController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ContenidosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-13 09:16:11 --> Attempt to assign property "token" on array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ContenidosController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ContenidosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

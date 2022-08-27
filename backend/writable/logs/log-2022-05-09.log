@@ -1,0 +1,14 @@
+CRITICAL - 2022-05-09 06:17:20 --> App\Models\UsuarioModel::guardar(): Argument #1 ($infoTable) must be of type object, int given, called in C:\proyectos\academia\backend\app\Controllers\API\EstudiantesController.php on line 140
+#0 C:\proyectos\academia\backend\app\Controllers\API\EstudiantesController.php(140): App\Models\UsuarioModel->guardar(9)
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\EstudiantesController->guardar()
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\EstudiantesController))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-09 06:20:58 --> App\Models\UsuarioModel::guardar(): Argument #1 ($infoTable) must be of type object, array given, called in C:\proyectos\academia\backend\app\Controllers\API\EstudiantesController.php on line 140
+#0 C:\proyectos\academia\backend\app\Controllers\API\EstudiantesController.php(140): App\Models\UsuarioModel->guardar(Array)
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\EstudiantesController->guardar()
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\EstudiantesController))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

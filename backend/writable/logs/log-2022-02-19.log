@@ -1,0 +1,107 @@
+CRITICAL - 2022-02-19 21:14:53 --> Too few arguments to function App\Controllers\API\LoginController::login(), 0 passed in C:\proyectos\academia\backend\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\LoginController->login()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\LoginController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-02-19 21:15:08 --> Undefined variable $canal
+#0 C:\proyectos\academia\backend\app\Controllers\API\LoginController.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\proyectos\\ac...', 37)
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\LoginController->login()
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\LoginController))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-19 21:15:49 --> Undefined variable $canal
+#0 C:\proyectos\academia\backend\app\Controllers\API\LoginController.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\proyectos\\ac...', 37)
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\LoginController->login()
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\LoginController))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-19 21:16:01 --> json_decode(): Passing null to parameter #1 ($json) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'json_decode(): ...', 'C:\\proyectos\\ac...', 68)
+#1 C:\proyectos\academia\backend\app\Controllers\BaseController.php(68): json_decode(NULL, true)
+#2 C:\proyectos\academia\backend\app\Controllers\API\LoginController.php(37): App\Controllers\BaseController->getRequestInput(Object(CodeIgniter\HTTP\IncomingRequest))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\LoginController->login()
+#4 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\LoginController))
+#5 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-19 21:18:16 --> json_decode(): Passing null to parameter #1 ($json) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'json_decode(): ...', 'C:\\proyectos\\ac...', 68)
+#1 C:\proyectos\academia\backend\app\Controllers\BaseController.php(68): json_decode(NULL, true)
+#2 C:\proyectos\academia\backend\app\Controllers\API\LoginController.php(37): App\Controllers\BaseController->getRequestInput(Object(CodeIgniter\HTTP\IncomingRequest))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\LoginController->login()
+#4 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\LoginController))
+#5 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-19 21:19:10 --> json_decode(): Passing null to parameter #1 ($json) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'json_decode(): ...', 'C:\\proyectos\\ac...', 68)
+#1 C:\proyectos\academia\backend\app\Controllers\BaseController.php(68): json_decode(NULL, true)
+#2 C:\proyectos\academia\backend\app\Controllers\API\LoginController.php(37): App\Controllers\BaseController->getRequestInput(Object(CodeIgniter\HTTP\IncomingRequest))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\LoginController->login()
+#4 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\LoginController))
+#5 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-19 21:20:14 --> json_decode(): Passing null to parameter #1 ($json) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'json_decode(): ...', 'C:\\proyectos\\ac...', 68)
+#1 C:\proyectos\academia\backend\app\Controllers\BaseController.php(68): json_decode(NULL, true)
+#2 C:\proyectos\academia\backend\app\Controllers\API\LoginController.php(37): App\Controllers\BaseController->getRequestInput(Object(CodeIgniter\HTTP\IncomingRequest))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\LoginController->login()
+#4 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\LoginController))
+#5 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-19 21:22:59 --> json_decode(): Passing null to parameter #1 ($json) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'json_decode(): ...', 'C:\\proyectos\\ac...', 68)
+#1 C:\proyectos\academia\backend\app\Controllers\BaseController.php(68): json_decode(NULL, true)
+#2 C:\proyectos\academia\backend\app\Controllers\API\LoginController.php(37): App\Controllers\BaseController->getRequestInput(Object(CodeIgniter\HTTP\IncomingRequest))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\LoginController->login()
+#4 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\LoginController))
+#5 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-19 21:24:43 --> Class "App\Controllers\Services" not found
+#0 C:\proyectos\academia\backend\app\Controllers\API\LoginController.php(38): App\Controllers\BaseController->validateRequest(Array, Array, Array)
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\LoginController->login()
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\LoginController))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-19 21:28:43 --> Class "App\Controllers\Services" not found
+#0 C:\proyectos\academia\backend\app\Controllers\API\LoginController.php(38): App\Controllers\BaseController->validateRequest(Array, Array, Array)
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\LoginController->login()
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\LoginController))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-02-19 21:29:42 --> Class "Config\UserRules" not found
+#0 C:\proyectos\academia\backend\system\Validation\Validation.php(115): CodeIgniter\Validation\Validation->loadRuleSets()
+#1 C:\proyectos\academia\backend\app\Controllers\BaseController.php(97): CodeIgniter\Validation\Validation->run(Array)
+#2 C:\proyectos\academia\backend\app\Controllers\API\LoginController.php(38): App\Controllers\BaseController->validateRequest(Array, Array, Array)
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\LoginController->login()
+#4 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\LoginController))
+#5 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-19 21:31:38 --> Class "Config\UserRules" not found
+#0 C:\proyectos\academia\backend\system\Validation\Validation.php(115): CodeIgniter\Validation\Validation->loadRuleSets()
+#1 C:\proyectos\academia\backend\app\Controllers\BaseController.php(97): CodeIgniter\Validation\Validation->run(Array)
+#2 C:\proyectos\academia\backend\app\Controllers\API\LoginController.php(38): App\Controllers\BaseController->validateRequest(Array, Array, Array)
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\LoginController->login()
+#4 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\LoginController))
+#5 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-02-19 21:32:18 --> Class "App\Models\UsuarioModel" not found
+#0 C:\proyectos\academia\backend\system\Validation\Validation.php(292): App\Validation\UserRules->validateUser('12345678', 'username, passw...', Array, NULL)
+#1 C:\proyectos\academia\backend\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#2 C:\proyectos\academia\backend\app\Controllers\BaseController.php(97): CodeIgniter\Validation\Validation->run(Array)
+#3 C:\proyectos\academia\backend\app\Controllers\API\LoginController.php(38): App\Controllers\BaseController->validateRequest(Array, Array, Array)
+#4 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\LoginController->login()
+#5 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\LoginController))
+#6 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}

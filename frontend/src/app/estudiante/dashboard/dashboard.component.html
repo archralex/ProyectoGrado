@@ -1,0 +1,175 @@
+<div class="overlay" *ngIf="cargando">
+  <mat-spinner class="spinner"></mat-spinner>
+</div>
+<section class="content-header">
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <div class="col-lg-3">
+        <h1>MIS CURSOS</h1>
+      </div>
+      <div class="col"><hr></div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+<div class="card mt-3">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-9">
+        <div class="row">
+          <div class="col-12">
+            <mat-form-field appearance="standard" class="px-2">
+              <mat-label>Buscar</mat-label>
+              <input matInput (keyup)="applyFilter($event)" placeholder="Escribe nombre curso o programa..." #input>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="mat-elevation-z1 mt-3">
+          <table mat-table [dataSource]="dataSource">
+            <!-- Codigo Column -->
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef> Codigo </th>
+              <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+
+            <!-- Nombre Column -->
+            <ng-container matColumnDef="nombre">
+              <th mat-header-cell *matHeaderCellDef> Curso </th>
+              <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+            </ng-container>
+
+            <!-- Acciones Column -->
+            <ng-container matColumnDef="acciones">
+              <th mat-header-cell *matHeaderCellDef> Acciones </th>
+              <td mat-cell *matCellDef="let element">
+                <button mat-icon-button
+                        (click)="ver(element)"
+                        matTooltip="Ir al curso"
+                        data-bs-toggle="modal"
+                        data-bs-target="#verCurso">
+                  <mat-icon class="text-success">visibility</mat-icon>
+                </button>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+
+          <mat-paginator
+            [length]="total"
+            [pageSize]="page_size"
+            [pageSizeOptions]="pageSizeOptions"
+            (page)="onPageChange($event)"
+            [showFirstLastButtons]="true"
+          >
+          </mat-paginator>
+        </div>
+      </div>
+      <div class="col-3">
+
+        <!-- card title -->
+        <div class="card-title text-center bg-primary border border-1 border-primary rounded-3">
+          <h3 class="text-center text-white">Bienvenido</h3>
+        </div>
+        <div class="card-body mat-elevation-z1 border border-1 border-primary rounded-3">
+          <div class="row">
+            <div class="col-12">
+              <div class="text-center">
+                <img src="{{user.foto?user.foto:'assets/images/anonymous.png'}}" alt="Foto de perfil" class="img-fluid rounded-circle" width="100px">
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <div class="text-center">
+                <h5>{{user.nombres+' '+user.apellidos}}</h5>
+                <hr class="border border-2 border-primary">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="">
+                <h5><span class="text-primary">Codigo:</span>  {{user.identificacion}}</h5>
+                <h5><span class="text-primary">Correo:</span>  {{user.correo}}</h5>
+              </div>
+              <hr class="border border-2 border-primary">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal persona -->
+<div class="modal fade" id="verCurso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h4 class="modal-title">Temas del curso</h4>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body scroll-content">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="text-center">
+                      <h3 class="text-uppercase"><b>{{nombreCurso}}</b></h3>
+                      <hr class="border border-5 border-primary">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-4">
+                    <div class="text-center">
+                      <h3>Tema</h3>
+                      <hr class="border border-2 border-primary">
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="text-center">
+                      <h3>Descripcion</h3>
+                      <hr class="border border-2 border-primary">
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="text-center">
+                      <h3>Ver contenido</h3>
+                      <hr class="border border-2 border-primary">
+                    </div>
+                  </div>
+                </div>
+                <div class="row" *ngIf="contenidos.length==0">
+                  <div class="col-12">
+                    <div class="text-center">
+                      <h3>No hay temas para visualizar de este curso</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="row" *ngFor="let contenido of contenidos">
+                  <div class="col-4">
+                    <div class="text-start">
+                      <h3>{{contenido.tema}}</h3>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="text-start">
+                      <h3>{{contenido.descripcion}}</h3>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="text-center">
+                      <a mat-icon-button href="{{contenido.url}}" target="_blank" matTooltip="Ver"><mat-icon class="text-success">visibility</mat-icon></a>
+                    </div>
+                  </div>
+                  <hr class="border border-2 border-primary">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>

@@ -1,0 +1,18 @@
+ERROR - 2022-03-20 19:23:46 --> Error connecting to the database: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+CRITICAL - 2022-03-20 19:23:47 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+#0 C:\proyectos\academia\backend\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\proyectos\academia\backend\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `rol`.`n...', Array, false)
+#2 C:\proyectos\academia\backend\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\proyectos\academia\backend\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\proyectos\academia\backend\app\Models\UsuarioModel.php(37): CodeIgniter\BaseModel->first()
+#5 C:\proyectos\academia\backend\app\Validation\UserRules.php(12): App\Models\UsuarioModel->obtenerSession('admin')
+#6 C:\proyectos\academia\backend\system\Validation\Validation.php(292): App\Validation\UserRules->validateUser('12345678', 'username, passw...', Array, NULL)
+#7 C:\proyectos\academia\backend\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('password', 'password', '12345678', Array, Array)
+#8 C:\proyectos\academia\backend\app\Controllers\BaseController.php(97): CodeIgniter\Validation\Validation->run(Array)
+#9 C:\proyectos\academia\backend\app\Controllers\API\LoginController.php(38): App\Controllers\BaseController->validateRequest(Array, Array, Array)
+#10 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\LoginController->login()
+#11 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\LoginController))
+#12 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 {main}

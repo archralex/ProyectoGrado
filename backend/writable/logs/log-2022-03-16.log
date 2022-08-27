@@ -1,0 +1,21 @@
+CRITICAL - 2022-03-16 21:14:01 --> Class "Config\JWTAuthenticationFilter" not found
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(386): CodeIgniter\Filters\Filters->run('api/estudiantes...', 'before')
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2022-03-16 21:16:22 --> Class "Config\JWTAuthenticationFilter" not found
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(386): CodeIgniter\Filters\Filters->run('api/estudiantes...', 'before')
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#3 {main}
+ERROR - 2022-03-16 21:43:52 --> Column 'id' in field list is ambiguous
+ERROR - 2022-03-16 21:47:01 --> Column 'id' in field list is ambiguous
+ERROR - 2022-03-16 21:49:01 --> Column 'status' in field list is ambiguous
+CRITICAL - 2022-03-16 22:04:07 --> CodeIgniter\BaseModel::findAll(): Argument #2 ($offset) must be of type int, string given, called in C:\proyectos\academia\backend\app\Models\PersonaModel.php on line 50
+#0 C:\proyectos\academia\backend\app\Models\PersonaModel.php(50): CodeIgniter\BaseModel->findAll(10, '')
+#1 C:\proyectos\academia\backend\app\Controllers\API\EstudiantesController.php(26): App\Models\PersonaModel->getStudents(Array)
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\EstudiantesController->mostrar()
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\EstudiantesController))
+#4 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}

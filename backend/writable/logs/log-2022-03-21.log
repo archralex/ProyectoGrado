@@ -1,0 +1,86 @@
+CRITICAL - 2022-03-21 12:33:25 --> Undefined array key "msg"
+#0 C:\proyectos\academia\backend\app\Controllers\API\LoginController.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\proyectos\\ac...', 40)
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\LoginController->login()
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\LoginController))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-21 12:48:05 --> Call to undefined function App\Controllers\API\getExpirationTime()
+#0 C:\proyectos\academia\backend\app\Controllers\API\LoginController.php(51): App\Controllers\API\LoginController->getJWTForUser('admin')
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\LoginController->login()
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\LoginController))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-21 13:02:38 --> Undefined property: stdClass::$exp
+#0 C:\proyectos\academia\backend\app\Controllers\API\ExpireTokenController.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\proyectos\\ac...', 16)
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ExpireTokenController->index()
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ExpireTokenController))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-21 13:03:54 --> Attempt to read property "exp" on null
+#0 C:\proyectos\academia\backend\app\Controllers\API\ExpireTokenController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\proyectos\\ac...', 17)
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ExpireTokenController->index()
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ExpireTokenController))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-21 13:11:44 --> Class "App\Controllers\API\ResponseInterface" not found
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ExpireTokenController->index()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ExpireTokenController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-21 13:12:08 --> Class "App\Controllers\API\ResponseInterface" not found
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ExpireTokenController->index()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ExpireTokenController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-21 13:15:05 --> Expired token
+#0 C:\proyectos\academia\backend\app\Helpers\jwt_helper.php(70): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1Q...', Object(Firebase\JWT\Key))
+#1 C:\proyectos\academia\backend\app\Controllers\API\ExpireTokenController.php(26): getSesionJWTFromRequest('eyJ0eXAiOiJKV1Q...')
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ExpireTokenController->index()
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ExpireTokenController))
+#4 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-21 13:15:30 --> Expired token
+#0 C:\proyectos\academia\backend\app\Helpers\jwt_helper.php(70): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1Q...', Object(Firebase\JWT\Key))
+#1 C:\proyectos\academia\backend\app\Controllers\API\ExpireTokenController.php(26): getSesionJWTFromRequest('eyJ0eXAiOiJKV1Q...')
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ExpireTokenController->index()
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ExpireTokenController))
+#4 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-21 13:15:46 --> Expired token
+#0 C:\proyectos\academia\backend\app\Helpers\jwt_helper.php(70): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1Q...', Object(Firebase\JWT\Key))
+#1 C:\proyectos\academia\backend\app\Controllers\API\ExpireTokenController.php(26): getSesionJWTFromRequest('eyJ0eXAiOiJKV1Q...')
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ExpireTokenController->index()
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ExpireTokenController))
+#4 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-21 13:16:13 --> Expired token
+#0 C:\proyectos\academia\backend\app\Helpers\jwt_helper.php(70): Firebase\JWT\JWT::decode('eyJ0eXAiOiJKV1Q...', Object(Firebase\JWT\Key))
+#1 C:\proyectos\academia\backend\app\Controllers\API\ExpireTokenController.php(26): getSesionJWTFromRequest('eyJ0eXAiOiJKV1Q...')
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\ExpireTokenController->index()
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\ExpireTokenController))
+#4 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-21 16:48:33 --> CodeIgniter\Router\RouteCollection::getFilterForRoute(): Return value must be of type string, array returned
+#0 C:\proyectos\academia\backend\system\Router\Router.php(161): CodeIgniter\Router\RouteCollection->getFilterForRoute('renew')
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('renew')
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-21 16:51:30 --> CodeIgniter\Router\RouteCollection::getFilterForRoute(): Return value must be of type string, array returned
+#0 C:\proyectos\academia\backend\system\Router\Router.php(161): CodeIgniter\Router\RouteCollection->getFilterForRoute('renew')
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('renew')
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

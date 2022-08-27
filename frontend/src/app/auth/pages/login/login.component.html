@@ -1,0 +1,54 @@
+<div class="overlay" *ngIf="cargando">
+  <mat-spinner class="spinner"></mat-spinner>
+</div>
+<div id="container-login" class="container-fluid p-3 h-100">
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <mat-card class="shadow-lg">
+          <div class="text-center mt-3">
+            <img width="150 px" src="assets/images/login/user.png" alt="logo">
+          </div>
+          <mat-card-title class="text-center mt-3">
+            <h1>Login</h1>
+          </mat-card-title>
+          <mat-card-content>
+            <form
+              autocomplete="off"
+              [formGroup]="miFormulario"
+              (ngSubmit)="login()">
+              <mat-form-field class="w-100" appearance="fill">
+                <mat-label>Usuario</mat-label>
+                <input
+                  matInput
+                  placeholder="Escribe aqui tu usuario..."
+                  formControlName="username"
+                >
+              </mat-form-field>
+              <br>
+              <mat-form-field  class="w-100" appearance="fill">
+                <mat-label>Contraseña</mat-label>
+                <input
+                  matInput [type]="hide ? 'password' : 'text'"
+                  placeholder="Escribe aqui tu contraseña..."
+                  formControlName="password"
+                >
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+              </mat-form-field>
+              <br>
+              <div class="text-center">
+                <button
+                  mat-raised-button
+                  color="primary"
+                  class="w-100"
+                  type="submit"
+                  [disabled]="miFormulario.invalid"
+                >Ingresar</button>
+              </div>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

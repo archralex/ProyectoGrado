@@ -1,0 +1,80 @@
+<section class="content-header">
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <div class="col-lg-3">
+        <h1>MI PERFIL</h1>
+      </div>
+      <div class="col"><hr></div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+<div class="card mt-3">
+  <div class="card-body">
+    <div class="col-4">
+      <div class="card-body mat-elevation-z1 border border-1 border-primary rounded-3">
+        <div class="row">
+          <div class="col-12">
+            <div class="text-center">
+              <img src="{{user.foto?user.foto:'assets/images/anonymous.png'}}" alt="Foto de perfil" class="img-fluid rounded-circle" width="100px">
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <div class="text-center">
+              <h5>{{user.nombres+' '+user.apellidos}}</h5>
+              <hr class="border border-2 border-primary">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="">
+              <h5><span class="text-primary">Codigo:</span>  {{user.identificacion}}</h5>
+              <h5><span class="text-primary">Rol:</span>  {{user.nombreRol}}</h5>
+              <!-- formulario para actualizar correo e imagen -->
+              <form
+                autocomplete="off"
+                [formGroup]="actualizarUsuario"
+                (ngSubmit)="actualizar()"
+                enctype="multipart/form-data"
+              >
+                <div class="form-floating mt-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="correo"
+                    formControlName="correo"
+                    placeholder="Correo"
+                    required
+                    >
+                  <label for="correo">Correo</label>
+                  <mat-error *ngIf="actualizarUsuario.get('correo')!.hasError('required') && actualizarUsuario.get('correo')!.touched">
+                    <strong>Por favor ingrese un correo</strong>
+                  </mat-error>
+                </div>
+                <div class="form-group mt-1">
+                  <label for="foto">Foto</label>
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="foto"
+                    name="foto"
+                    placeholder="Foto"
+                    accept="image/*"
+                    (change)="fileChange($event)"
+                    required>
+                </div>
+                <hr class="border border-2 border-primary">
+                <div class="form-group text-end">
+                  <button type="submit" class="btn btn-primary btn-block">Actualizar</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

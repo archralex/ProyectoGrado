@@ -1,0 +1,43 @@
+CRITICAL - 2022-04-04 21:49:15 --> Cannot use object of type stdClass as array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\CursosController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CursosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-04 21:52:34 --> Cannot use object of type stdClass as array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\CursosController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CursosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-04 21:52:41 --> Cannot use object of type stdClass as array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\CursosController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CursosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-04 21:54:20 --> Cannot use object of type stdClass as array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\CursosController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CursosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-04 21:54:21 --> Cannot use object of type stdClass as array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\CursosController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CursosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-04 21:54:39 --> Cannot use object of type stdClass as array
+#0 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\CursosController->mostrar()
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CursosController))
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-04 21:56:25 --> App\Models\CursoModel::getCourses(): Argument #1 ($infoTable) must be of type App\Models\stdclass, stdClass given, called in C:\proyectos\academia\backend\app\Controllers\API\CursosController.php on line 36
+#0 C:\proyectos\academia\backend\app\Controllers\API\CursosController.php(36): App\Models\CursoModel->getCourses(Object(stdClass))
+#1 C:\proyectos\academia\backend\system\CodeIgniter.php(825): App\Controllers\API\CursosController->mostrar()
+#2 C:\proyectos\academia\backend\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\API\CursosController))
+#3 C:\proyectos\academia\backend\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\proyectos\academia\backend\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

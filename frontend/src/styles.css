@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.link{
+  cursor: pointer;
+}
+th{
+  width: 18%;
+}
+table {
+  width: 100%;
+}
+.th-code{
+  width: 8%;
+}
+.modal-backdrop {
+  z-index: -1;
+}
+.bg-light-gray {
+  background-color: var(--bs-gray-100);
+}
+/* margin negativos */
+.mt-n1 {
+  margin-top: -0.25rem !important;
+}
+.mt-n2 {
+  margin-top: -0.5rem !important;
+}
+.mt-n3 {
+  margin-top: -0.75rem !important;
+}
+.mt-n4 {
+  margin-top: -1rem !important;
+}
+.mt-n5 {
+  margin-top: -1.25rem !important;
+}
+.overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(243, 242, 242, 0.8);
+  z-index: 1056;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.spinner{
+  margin-left: -14%;
+  margin-top: -11%;
+}
+/*Scroll interno de las card*/
+
+.scroll-content {
+  max-height: calc(94vh - 1rem);
+  overflow-y: auto;
+}
+
+.scroll-content::-webkit-scrollbar {
+  width: 7px;
+  /* Tamaño del scroll en vertical */
+  height: 7px;
+  /* Tamaño del scroll en horizontal */
+}
+
+.scroll-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scroll-content::-webkit-scrollbar-thumb {
+  background: #888;
+  width: 15px;
+  border-radius: 55px;
+}
+
+.scroll-content::-webkit-scrollbar-thumb {
+  background: #449ddf;
+}
+
+.scroll-content::-webkit-scrollbar-thumb:hover {
+  background: #0e8beb;
+}

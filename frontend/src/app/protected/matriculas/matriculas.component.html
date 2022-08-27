@@ -1,0 +1,149 @@
+<!-- Content Header (Page header) -->
+<div class="overlay" *ngIf="cargando">
+  <mat-spinner class="spinner"></mat-spinner>
+</div>
+<section class="content-header">
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <div class="col-lg-3">
+        <h1>INSCRIPCION A CURSOS</h1>
+      </div>
+      <div class="col"><hr></div>
+      <div class="col-1 text-end">
+        <button
+          type="button"
+          class="btn btn-primary btn-group"
+          data-bs-toggle="modal"
+          data-bs-target="#nuevaMatricula"
+          (click)="clearformNuevaMatricula()"
+        >
+          <!-- icono plus material-->
+          <i class="material-icons">add</i>
+        </button>
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+<div class="card mt-3">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-12">
+        <mat-form-field appearance="standard" class="px-2">
+          <mat-label>Buscar</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Escribe nombres,  apellidos o identificacion..." #input>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="mat-elevation-z1 mt-3">
+          <table mat-table [dataSource]="dataSource">
+
+            <!-- Codigo Column -->
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef class="th-code"> Codigo. </th>
+              <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+            <!-- tipo identificacion Column -->
+            <ng-container matColumnDef="tipoId">
+              <th mat-header-cell *matHeaderCellDef class="th-code"> Tipo. </th>
+              <td mat-cell *matCellDef="let element"> {{element.tipoId}} </td>
+            </ng-container>
+            <!-- identificacion Column -->
+            <ng-container matColumnDef="identificacion">
+              <th mat-header-cell *matHeaderCellDef> Identificación. </th>
+              <td mat-cell *matCellDef="let element"> {{element.identificacion}} </td>
+            </ng-container>
+            <!-- Estudiante Column -->
+            <ng-container matColumnDef="estudiante">
+              <th mat-header-cell *matHeaderCellDef> Estudiante. </th>
+              <td mat-cell *matCellDef="let element"> {{element.estudiante}} </td>
+            </ng-container>
+            <!-- Estudiante Column -->
+            <ng-container matColumnDef="cursoNombre">
+              <th mat-header-cell *matHeaderCellDef> Curso. </th>
+              <td mat-cell *matCellDef="let element"> {{element.cursoNombre}} </td>
+            </ng-container>
+            <!-- status Column -->
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef> Estado. </th>
+              <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+            </ng-container>
+
+            <!-- Acciones Column -->
+            <ng-container matColumnDef="acciones">
+              <th mat-header-cell *matHeaderCellDef> Acciones </th>
+              <td mat-cell *matCellDef="let element">
+                  <div class="btn-group">
+                    <button
+                      mat-icon-button (click)="edit(element)"
+                      matTooltip="Editar"
+                      >
+                      <mat-icon class="text-primary">edit</mat-icon>
+                    </button>
+                    <button
+                      mat-icon-button (click)="delete(element.id)"
+                      matTooltip="Eliminar"
+                      >
+                      <mat-icon class="text-danger">delete_forever</mat-icon>
+                    </button>
+                  </div>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+
+          <mat-paginator
+            [length]="total"
+            [pageSize]="page_size"
+            [pageSizeOptions]="pageSizeOptions"
+            (page)="onPageChange($event)"
+            [showFirstLastButtons]="true"
+          >
+          </mat-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal persona -->
+<div class="modal fade" id="nuevaMatricula" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h4 class="modal-title" *ngIf="!editarMatricula">Nueva Matricula</h4>
+        <h4 class="modal-title" *ngIf="editarMatricula">Editar Matricula</h4>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form
+          autocomplete="off"
+          [formGroup]="formNuevaMatricula"
+          (ngSubmit)="save()">
+          <div class="form-floating mt-2">
+            <select class="form-select" aria-label="curso" formControlName="curso">
+              <option *ngFor="let curso of cursos" [value]="curso.id">{{curso.nombre}}</option>
+            </select>
+            <label for="curso">Seleccione un curso</label>
+            <mat-error *ngIf="formNuevaMatricula.get('curso')!.hasError('required') && formNuevaMatricula.get('curso')!.touched">
+              <strong>Por favor seleccione un curso</strong>
+            </mat-error>
+          </div>
+          <div class="form-floating mt-2">
+            <input type="text" class="form-control" id="identificacion" formControlName="identificacion" placeholder="Identificación" *ngIf="!editarMatricula">
+            <input type="text" class="form-control" id="identificacion" formControlName="identificacion" placeholder="Identificación" readonly *ngIf="editarMatricula">
+            <label for="identificacion">Identificación</label>
+            <mat-error *ngIf="formNuevaMatricula.get('identificacion')!.hasError('required') && formNuevaMatricula.get('identificacion')!.touched">
+              <strong>Por favor ingrese una identificacion</strong>
+            </mat-error>
+          </div>
+            <div class="text-end mt-2">
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

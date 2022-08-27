@@ -1,0 +1,184 @@
+<!-- Content Header (Page header) -->
+<div class="overlay" *ngIf="cargando">
+  <mat-spinner class="spinner"></mat-spinner>
+</div>
+<section class="content-header">
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <div class="col-lg-3">
+        <h1>GESTIÓN DE CONTENIDOS</h1>
+      </div>
+      <div class="col"><hr></div>
+      <div class="col-1 text-end">
+        <button
+          type="button"
+          class="btn btn-primary btn-group"
+          data-bs-toggle="modal"
+          data-bs-target="#nuevoContenido"
+          (click)="clearformNuevoContenido()"
+        >
+          <!-- icono plus material-->
+          <i class="material-icons">add</i>
+        </button>
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+<div class="card mt-3">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-12">
+        <mat-form-field appearance="standard" class="px-2">
+          <mat-label>Buscar</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Escribe nombres,  apellidos o identificacion..." #input>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="mat-elevation-z1 mt-3">
+          <table mat-table [dataSource]="dataSource">
+
+            <!-- Codigo Column -->
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef class="th-code"> Codigo. </th>
+              <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+            <!-- Curso Column -->
+            <ng-container matColumnDef="cursoNombre">
+              <th mat-header-cell *matHeaderCellDef> Curso. </th>
+              <td mat-cell *matCellDef="let element"> {{element.cursoNombre}} </td>
+            </ng-container>
+            <!-- Nombre Column -->
+            <ng-container matColumnDef="tema">
+              <th mat-header-cell *matHeaderCellDef> Tema. </th>
+              <td mat-cell *matCellDef="let element"> {{element.tema}} </td>
+            </ng-container>
+            <!-- Estado Column -->
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef> Estado. </th>
+              <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+            </ng-container>
+
+            <!-- Acciones Column -->
+            <ng-container matColumnDef="acciones">
+              <th mat-header-cell *matHeaderCellDef> Acciones </th>
+              <td mat-cell *matCellDef="let element">
+                  <div class="btn-group">
+                    <a mat-icon-button href="{{element.url}}" target="_blank" matTooltip="Ver"><mat-icon class="text-success">visibility</mat-icon></a>
+                    <button
+                      mat-icon-button
+                      (click)="edit(element)"
+                      matTooltip="Editar"
+                      >
+                      <mat-icon class="text-primary">edit</mat-icon>
+                    </button>
+                    <button
+                      mat-icon-button (click)="delete(element)"
+                      matTooltip="Eliminar"
+                      >
+                      <mat-icon class="text-danger">delete_forever</mat-icon>
+                    </button>
+                  </div>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+
+          <mat-paginator
+            [length]="total"
+            [pageSize]="page_size"
+            [pageSizeOptions]="pageSizeOptions"
+            (page)="onPageChange($event)"
+            [showFirstLastButtons]="true"
+          >
+          </mat-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal persona -->
+<div class="modal fade" id="nuevoContenido" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h4 class="modal-title" *ngIf="!editarContenido">Nuevo Contenido</h4>
+        <h4 class="modal-title" *ngIf="editarContenido">Editar Contenido</h4>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form
+          autocomplete="off"
+          [formGroup]="formNuevoContenido"
+          (ngSubmit)="save()"
+          enctype="multipart/form-data"
+          >
+            <div class="form-floating mt-2">
+              <select class="form-select" aria-label="curso" formControlName="curso">
+                <option *ngFor="let curso of cursos" [value]="curso.id">{{curso.nombre}}</option>
+              </select>
+              <label for="curso">Seleccione un curso</label>
+              <mat-error *ngIf="formNuevoContenido.get('curso')!.hasError('required') && formNuevoContenido.get('curso')!.touched">
+                <strong>Por favor seleccione un curso</strong>
+              </mat-error>
+            </div>
+            <div class="form-floating mt-2">
+              <input type="text" class="form-control" id="tema" formControlName="tema" placeholder="Tema">
+              <label for="tema">Tema</label>
+              <mat-error *ngIf="formNuevoContenido.get('tema')!.hasError('required') && formNuevoContenido.get('tema')!.touched">
+                <strong>Por favor ingrese un tema</strong>
+              </mat-error>
+            </div>
+            <div class="form-floating mt-2">
+              <textarea
+                type="text"
+                class="form-control"
+                id="descripcion"
+                formControlName="descripcion"
+                placeholder="Descripcion"
+                style="height: 100px"
+                >
+              </textarea>
+              <label for="descripcion">Descripcion</label>
+              <mat-error *ngIf="formNuevoContenido.get('descripcion')!.hasError('required') && formNuevoContenido.get('descripcion')!.touched">
+                <strong>Por favor ingrese una descripcion</strong>
+              </mat-error>
+            </div>
+            <div class="form-floating mt-2">
+              <select class="form-select" id="floatingSelect" aria-label="Programa" formControlName="status">
+                <option value="ACTIVO">ACTIVO</option>
+                <option value="INACTIVO">INACTIVO</option>
+              </select>
+              <label for="floatingSelect">Estado</label>
+              <mat-error *ngIf="formNuevoContenido.get('status')!.hasError('required') && formNuevoContenido.get('status')!.touched">
+                <strong>Por favor ingrese un estado</strong>
+              </mat-error>
+            </div>
+            <div class="mt-2">
+              <div class="d-flex m-1">
+                <label for="archivo" class="m-1">Contenido del tema </label> <mat-icon class="text-danger">picture_as_zip</mat-icon>
+              </div>
+              <input
+                type="file"
+                class="form-control"
+                id="archivo"
+                formControlName="archivo"
+                placeholder="Archivo"
+                accept=".zip"
+                (change)="fileChange($event)"
+                >
+              <mat-error *ngIf="formNuevoContenido.get('archivo')!.hasError('required') && formNuevoContenido.get('archivo')!.touched">
+                <strong>Por favor ingrese un archivo</strong>
+              </mat-error>
+            </div>
+            <div class="text-end mt-2">
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
